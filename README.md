@@ -22,4 +22,4 @@ Contact: <a href="https://web.eecs.umich.edu/~mayankb/">Mayank Baranwal, Postdoc
 The proposed GCN architecture comprising of mutual attention mechanism for interaction prediction between query proteins is built upon our prior work on using GCNs for metabolic pathway prediction [1].
 
 ### References
-  1. Baranwal, Mayank, Abram Magner, Paolo Elvati, Jacob Saldinger, Angela Violi, and Alfred Hero. "A deep learning architecture for metabolic pathway prediction." Bioinformatics (2019)
+    1. Baranwal, Mayank, Abram Magner, Paolo Elvati, Jacob Saldinger, Angela Violi, and Alfred Hero. "A deep learning architecture for metabolic pathway prediction." Bioinformatics (2019)
