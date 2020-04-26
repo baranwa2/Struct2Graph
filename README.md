@@ -3,14 +3,13 @@ A PyTorch implementation of GCN with mutual attention for protein-protein intera
 
 ![Proposed GCN architecture with Mutual Attention Mechanism](approach.png)
 
-We use SMILES representation of query molecules to generate relevant fingerprints, which are then fed to the GCN/RF architecture for producing binary labels corresponding to each of the 11 metabolic pathway classes. The details of the GCN and RF architectures are described in our paper (currently under review).
+Struct2Graph uses two graph  convolutional networks (GCNs) with weight sharing, and a mutual attention network to extract relevant geometric features related toquery protein pairs. The details of the GCN architecture is described in our paper (currently under review).
 
-A dataset of 6669 compounds belonging to one or more of these 11 constituent pathway classes was downloaded (February 2019) from the KEGG database: https://www.genome.jp/kegg/pathway.html.
+A dataset of 11160 interactions (5580 positive pairs, 5580 negative pairs) consisting of 4024 proteins was downloaded from UniProt Acc. and IntAct.
 
 ### Requirements
 * PyTorch
 * scikit-learn
-* RDKit
 * Jupyter Notebook
 
 ### Usage
@@ -20,7 +19,7 @@ We provide two notebook files, one each for the multi-class GCN classifier and t
 Contact: <a href="https://web.eecs.umich.edu/~mayankb/">Mayank Baranwal, Postdoctoral Fellow, University of Michigan at Ann Arbor</a>
 
 ### Acknowledgements
-Part of the code was adopted from [1], and suitably modified for the pathway prediction task.
+The proposed GCN architecture comprising of mutual attention mechanism for interaction prediction between query proteins is built upon our prior work on using GCNs for metabolic pathway prediction [1].
 
 ### References
-1. Baranwal, Mayank, Abram Magner, Paolo Elvati, Jacob Saldinger, Angela Violi, and Alfred Hero. "A deep learning architecture for metabolic pathway prediction." Bioinformatics (2019)
+  1. Baranwal, Mayank, Abram Magner, Paolo Elvati, Jacob Saldinger, Angela Violi, and Alfred Hero. "A deep learning architecture for metabolic pathway prediction." Bioinformatics (2019)
