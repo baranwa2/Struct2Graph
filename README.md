@@ -10,7 +10,6 @@ A dataset of 11160 interactions (5580 positive pairs, 5580 negative pairs) consi
 ### Requirements
 * PyTorch
 * scikit-learn
-* Jupyter Notebook
 
 ### Usage
 We provide two notebook files, one each for the multi-class GCN classifier and the multi-class RF classifier. The notebooks are self-sufficient and various relevant details have been marked in the files themselves.
