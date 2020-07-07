@@ -1,28 +1,23 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Apr 27 10:27:10 2020
+Created on Tue Jul  7 12:12:24 2020
 
 @author: mayank
 """
 
-from collections import defaultdict
 import os
 from os import walk
-import pickle
-import sys
 
 import numpy as np
-import random
 from random import shuffle
-
-from  more_itertools import unique_everseen
 
 
 filepath = "pdb_files/input1/"
-os.chdir(filepath)
 
 for (dirpath, dirnames, filenames) in walk(filepath):
     break
+
+os.chdir(filepath)
         
 for word in filenames[:]:
     if not word.startswith('names'):
@@ -38,7 +33,6 @@ for f in filenames:
         m_list.append(st_ind)
         s_list.append(e)
     
-
 
 filepath = "../../"
 os.chdir(filepath)

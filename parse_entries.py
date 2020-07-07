@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Apr 27 10:25:40 2020
-
 @author: mayank
 """
 
 from Bio import SeqIO
 import numpy as np
 import os
+import pickle
 from os import walk
 from numpy import linalg as LA
 from collections import defaultdict
@@ -77,9 +77,6 @@ def create_amino_acids(acids):
 def dump_dictionary(dictionary, file_name):
     with open(file_name, 'wb') as f:
         pickle.dump(dict(dictionary), f)
-        
-
-
 
 
 def is_empty_pdb(pdb_id):
@@ -279,10 +276,14 @@ os.chdir(filepath)
 dir_input = ('input'+str(radius)+'/')
 os.makedirs(dir_input, exist_ok=True)
 
+os.chdir('../')
+
 f = []
 for (dirpath, dirnames, filenames) in walk(filepath):
     f.extend(filenames)
     break
+
+os.chdir(filepath)
 
 pdb_ids = []
 for data in f:
@@ -346,3 +347,6 @@ for n in range(num_prots):
             
         except:
             print(pdb_name, uniprot_id, user_chain)
+            
+dump_dictionary(fingerprint_dict, dir_input + 'fingerprint_dict.pickle')
+print('Length of fingerprint dictionary: '+str(len(fingerprint_dict)))
